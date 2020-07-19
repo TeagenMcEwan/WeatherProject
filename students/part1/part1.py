@@ -139,5 +139,6 @@ def process_weather(forecast_file):
 
 # Section six - Do NOT change code.
 if __name__ == "__main__":
+    print(process_weather("data/forecast_5days_a.json"))
     print(process_weather("data/forecast_10days.json"))
-# * 8days.json is titled _10days.json file
+# Note: 8days.json file is titled _10days.json file
