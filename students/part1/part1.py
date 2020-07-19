@@ -133,9 +133,11 @@ def process_weather(forecast_file):
     return "\n" f"-------- {date[2]} --------\n Minimum Temperature: {format_temperature(min_temp[2])}\n Maximum Temperature: {format_temperature(max_temp[2])}\n Daytime: {daytime[2]}\n     Chance of rain: {day_rain_chance[2]}%\n Nighttime: {nighttime[2]}\n     Chance of rain: {night_rain_chance[2]}%""\n"
     return "\n" f"-------- {date[3]} --------\n Minimum Temperature: {format_temperature(min_temp[3])}\n Maximum Temperature: {format_temperature(max_temp[3])}\n Daytime: {daytime[3]}\n     Chance of rain: {day_rain_chance[3]}%\n Nighttime: {nighttime[3]}\n     Chance of rain: {night_rain_chance[3]}%""\n"
     return "\n" f"-------- {date[4]} --------\n Minimum Temperature: {format_temperature(min_temp[4])}\n Maximum Temperature: {format_temperature(max_temp[4])}\n Daytime: {daytime[4]}\n     Chance of rain: {day_rain_chance[4]}%\n Nighttime: {nighttime[4]}\n     Chance of rain: {night_rain_chance[4]}%""\n"
-
+    return "\n" f"-------- {date[5]} --------\n Minimum Temperature: {format_temperature(min_temp[5])}\n Maximum Temperature: {format_temperature(max_temp[5])}\n Daytime: {daytime[5]}\n     Chance of rain: {day_rain_chance[5]}%\n Nighttime: {nighttime[5]}\n     Chance of rain: {night_rain_chance[5]}%""\n"
+    return "\n" f"-------- {date[6]} --------\n Minimum Temperature: {format_temperature(min_temp[6])}\n Maximum Temperature: {format_temperature(max_temp[6])}\n Daytime: {daytime[6]}\n     Chance of rain: {day_rain_chance[6]}%\n Nighttime: {nighttime[6]}\n     Chance of rain: {night_rain_chance[6]}%""\n"
+    return "\n" f"-------- {date[7]} --------\n Minimum Temperature: {format_temperature(min_temp[7])}\n Maximum Temperature: {format_temperature(max_temp[7])}\n Daytime: {daytime[7]}\n     Chance of rain: {day_rain_chance[7]}%\n Nighttime: {nighttime[7]}\n     Chance of rain: {night_rain_chance[7]}%""\n"
 
 # Section six - Do NOT change code.
 if __name__ == "__main__":
-    print(process_weather("data/forecast_5days_a.json"))
+    print(process_weather("data/forecast_10days.json"))
 # * 8days.json is titled _10days.json file
