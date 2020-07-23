@@ -7,13 +7,13 @@ DEGREE_SYBMOL = u"\N{DEGREE SIGN}C"
 def format_temperature(temp):
     return f"{temp}{DEGREE_SYBMOL}"
 
-    """Takes a temperature and returns it in string format with the degrees and celcius symbols.
+    # """Takes a temperature and returns it in string format with the degrees and celcius symbols.
     
-    Args:
-        temp: A string representing a temperature.
-    Returns:
-        A string contain the temperature and 'degrees celcius.'
-    """
+    # Args:
+    #     temp: A string representing a temperature.
+    # Returns:
+    #     A string contain the temperature and 'degrees celcius.'
+    # """
 
 
 # Section two - already completed.
@@ -22,13 +22,13 @@ def convert_date(iso_string):
     d = datetime.strptime(iso_string, "%Y-%m-%dT%H:%M:%S%z")
     return d.strftime('%A %d %B %Y')
 
-    """Converts and ISO formatted date into a human readable format.
+    # """Converts and ISO formatted date into a human readable format.
     
-    Args:
-        iso_string: An ISO date string..
-    Returns:
-        A date formatted like: Weekday Date Month Year
-    """
+    # Args:
+    #     iso_string: An ISO date string..
+    # Returns:
+    #     A date formatted like: Weekday Date Month Year
+    # """
 
 
 # Section three - add code.
@@ -38,13 +38,13 @@ def convert_f_to_c(temp_in_farenheit):
     celsius = round(celsius, 1)
     return celsius
 
-    """Converts an temperature from farenheit to celcius
+    # """Converts an temperature from farenheit to celcius
 
-    Args:
-        temp_in_farenheit: integer representing a temperature.
-    Returns:
-        An integer representing a temperature in degrees celcius.
-    """
+    # Args:
+    #     temp_in_farenheit: integer representing a temperature.
+    # Returns:
+    #     An integer representing a temperature in degrees celcius.
+    # """
 
 # (enter function here)
 # create a new variable - Use formula to convert to celcius - variable output
@@ -56,25 +56,25 @@ def convert_f_to_c(temp_in_farenheit):
 def calculate_mean(total, num_items):
     return round((total/num_items), 1)
 
-    """Calculates the mean.
+    # """Calculates the mean.
     
-    Args:
-        total: integer representing the sum of the numbers.
-        num_items: integer representing the number of items counted.
-    Returns:
-        An integer representing the mean of the numbers.
-    """
+    # Args:
+    #     total: integer representing the sum of the numbers.
+    #     num_items: integer representing the number of items counted.
+    # Returns:
+    #     An integer representing the mean of the numbers.
+    # """
 
 
 # Section five - add code.
-    """Converts raw weather data into meaningful text.
+    # """Converts raw weather data into meaningful text.
 
-    Args:
-        forecast_file: A string representing the file path to a file
-            containing raw weather data.
-    Returns:
-        A string containing the processed and formatted weather data.
-    """
+    # Args:
+    #     forecast_file: A string representing the file path to a file
+    #         containing raw weather data.
+    # Returns:
+    #     A string containing the processed and formatted weather data.
+    # """
 
 
 # Import the data (forecast data)
@@ -127,12 +127,13 @@ def process_weather(forecast_file):
     
 
     my_string = ""
-    my_string += "\n" f"{num_days} Day Overview\n    The lowest temperature will be {format_temperature(min_temp[0])}, and will occur on {date[0]}.\n    The highest temperature will be {format_temperature(max_temp[2])}, and will occur on {date[2]}.\n    The average low this week is {format_temperature(mean_min_result)}.\n    The average high this week is {format_temperature(mean_max_result)}." "\n" "\n" f"-------- {date[0]} --------\n Minimum Temperature: {format_temperature(min_temp[0])}\n Maximum Temperature: {format_temperature(max_temp[0])}\n Daytime: {daytime[0]}\n    Chance of rain: {day_rain_chance[0]}%\n Nighttime: {nighttime[0]}\n    Chance of rain: {night_rain_chance[0]}%""\n" "\n" f"-------- {date[1]} --------\n Minimum Temperature: {format_temperature(min_temp[1])}\n Maximum Temperature: {format_temperature(max_temp[1])}\n Daytime: {daytime[1]}\n    Chance of rain: {day_rain_chance[1]}%\n Nighttime: {nighttime[1]}\n    Chance of rain: {night_rain_chance[1]}%""\n" "\n" f"-------- {date[2]} --------\n Minimum Temperature: {format_temperature(min_temp[2])}\n Maximum Temperature: {format_temperature(max_temp[2])}\n Daytime: {daytime[2]}\n    Chance of rain: {day_rain_chance[2]}%\n Nighttime: {nighttime[2]}\n    Chance of rain: {night_rain_chance[2]}%""\n" "\n" f"-------- {date[3]} --------\n Minimum Temperature: {format_temperature(min_temp[3])}\n Maximum Temperature: {format_temperature(max_temp[3])}\n Daytime: {daytime[3]}\n    Chance of rain: {day_rain_chance[3]}%\n Nighttime: {nighttime[3]}\n    Chance of rain: {night_rain_chance[3]}%""\n" "\n" f"-------- {date[4]} --------\n Minimum Temperature: {format_temperature(min_temp[4])}\n Maximum Temperature: {format_temperature(max_temp[4])}\n Daytime: {daytime[4]}\n    Chance of rain: {day_rain_chance[4]}%\n Nighttime: {nighttime[4]}\n    Chance of rain: {night_rain_chance[4]}%""\n" 
+    my_string += "\n" f"{num_days} Day Overview\n   The lowest temperature will be {format_temperature(min_temp[0])}, and will occur on {date[0]}.\n   The highest temperature will be {format_temperature(max_temp[2])}, and will occur on {date[2]}.\n   The average low this week is {format_temperature(mean_min_result)}.\n   The average high this week is {format_temperature(mean_max_result)}.""\n"
+    my_string += "\n" f"-------- {date[0]} --------\n Minimum Temperature: {format_temperature(min_temp[0])}\n Maximum Temperature: {format_temperature(max_temp[0])}\n Daytime: {daytime[0]}\n     Chance of rain: {day_rain_chance[0]}%\n Nighttime: {nighttime[0]}\n     Chance of rain: {night_rain_chance[0]}%""\n" "\n" f"-------- {date[1]} --------\n Minimum Temperature: {format_temperature(min_temp[1])}\n Maximum Temperature: {format_temperature(max_temp[1])}\n Daytime: {daytime[1]}\n     Chance of rain: {day_rain_chance[1]}%\n Nighttime: {nighttime[1]}\n     Chance of rain: {night_rain_chance[1]}%""\n" "\n" f"-------- {date[2]} --------\n Minimum Temperature: {format_temperature(min_temp[2])}\n Maximum Temperature: {format_temperature(max_temp[2])}\n Daytime: {daytime[2]}\n     Chance of rain: {day_rain_chance[2]}%\n Nighttime: {nighttime[2]}\n     Chance of rain: {night_rain_chance[2]}%""\n" "\n" f"-------- {date[3]} --------\n Minimum Temperature: {format_temperature(min_temp[3])}\n Maximum Temperature: {format_temperature(max_temp[3])}\n Daytime: {daytime[3]}\n     Chance of rain: {day_rain_chance[3]}%\n Nighttime: {nighttime[3]}\n     Chance of rain: {night_rain_chance[3]}%""\n" "\n" f"-------- {date[4]} --------\n Minimum Temperature: {format_temperature(min_temp[4])}\n Maximum Temperature: {format_temperature(max_temp[4])}\n Daytime: {daytime[4]}\n     Chance of rain: {day_rain_chance[4]}%\n Nighttime: {nighttime[4]}\n     Chance of rain: {night_rain_chance[4]}%""\n"
     # my_string += "\n" f"-------- {date[5]} --------\n Minimum Temperature: {format_temperature(min_temp[5])}\n Maximum Temperature: {format_temperature(max_temp[5])}\n Daytime: {daytime[5]}\n     Chance of rain: {day_rain_chance[5]}%\n Nighttime: {nighttime[5]}\n     Chance of rain: {night_rain_chance[5]}%""\n" "\n" f"-------- {date[6]} --------\n Minimum Temperature: {format_temperature(min_temp[6])}\n Maximum Temperature: {format_temperature(max_temp[6])}\n Daytime: {daytime[6]}\n     Chance of rain: {day_rain_chance[6]}%\n Nighttime: {nighttime[6]}\n     Chance of rain: {night_rain_chance[6]}%""\n" "\n" f"-------- {date[7]} --------\n Minimum Temperature: {format_temperature(min_temp[7])}\n Maximum Temperature: {format_temperature(max_temp[7])}\n Daytime: {daytime[7]}\n     Chance of rain: {day_rain_chance[7]}%\n Nighttime: {nighttime[7]}\n     Chance of rain: {night_rain_chance[7]}%""\n"
     
     return my_string
 
-
+    
 # Section six - Do NOT change code.
 if __name__ == "__main__":
     print(process_weather("data/forecast_5days_a.json"))
