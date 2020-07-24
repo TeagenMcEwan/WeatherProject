@@ -124,14 +124,34 @@ def process_weather(forecast_file):
         day_rain_chance.append(items["Day"]["RainProbability"])
         nighttime.append(items["Night"]["LongPhrase"])
         night_rain_chance.append(items["Night"]["RainProbability"])
-    
 
-    my_string = ""
-    my_string += "\n" f"{num_days} Day Overview\n   The lowest temperature will be {format_temperature(min_temp[0])}, and will occur on {date[0]}.\n   The highest temperature will be {format_temperature(max_temp[2])}, and will occur on {date[2]}.\n   The average low this week is {format_temperature(mean_min_result)}.\n   The average high this week is {format_temperature(mean_max_result)}.""\n"
-    my_string += "\n" f"-------- {date[0]} --------\n Minimum Temperature: {format_temperature(min_temp[0])}\n Maximum Temperature: {format_temperature(max_temp[0])}\n Daytime: {daytime[0]}\n     Chance of rain: {day_rain_chance[0]}%\n Nighttime: {nighttime[0]}\n     Chance of rain: {night_rain_chance[0]}%""\n" "\n" f"-------- {date[1]} --------\n Minimum Temperature: {format_temperature(min_temp[1])}\n Maximum Temperature: {format_temperature(max_temp[1])}\n Daytime: {daytime[1]}\n     Chance of rain: {day_rain_chance[1]}%\n Nighttime: {nighttime[1]}\n     Chance of rain: {night_rain_chance[1]}%""\n" "\n" f"-------- {date[2]} --------\n Minimum Temperature: {format_temperature(min_temp[2])}\n Maximum Temperature: {format_temperature(max_temp[2])}\n Daytime: {daytime[2]}\n     Chance of rain: {day_rain_chance[2]}%\n Nighttime: {nighttime[2]}\n     Chance of rain: {night_rain_chance[2]}%""\n" "\n" f"-------- {date[3]} --------\n Minimum Temperature: {format_temperature(min_temp[3])}\n Maximum Temperature: {format_temperature(max_temp[3])}\n Daytime: {daytime[3]}\n     Chance of rain: {day_rain_chance[3]}%\n Nighttime: {nighttime[3]}\n     Chance of rain: {night_rain_chance[3]}%""\n" "\n" f"-------- {date[4]} --------\n Minimum Temperature: {format_temperature(min_temp[4])}\n Maximum Temperature: {format_temperature(max_temp[4])}\n Daytime: {daytime[4]}\n     Chance of rain: {day_rain_chance[4]}%\n Nighttime: {nighttime[4]}\n     Chance of rain: {night_rain_chance[4]}%""\n"
-    # my_string += "\n" f"-------- {date[5]} --------\n Minimum Temperature: {format_temperature(min_temp[5])}\n Maximum Temperature: {format_temperature(max_temp[5])}\n Daytime: {daytime[5]}\n     Chance of rain: {day_rain_chance[5]}%\n Nighttime: {nighttime[5]}\n     Chance of rain: {night_rain_chance[5]}%""\n" "\n" f"-------- {date[6]} --------\n Minimum Temperature: {format_temperature(min_temp[6])}\n Maximum Temperature: {format_temperature(max_temp[6])}\n Daytime: {daytime[6]}\n     Chance of rain: {day_rain_chance[6]}%\n Nighttime: {nighttime[6]}\n     Chance of rain: {night_rain_chance[6]}%""\n" "\n" f"-------- {date[7]} --------\n Minimum Temperature: {format_temperature(min_temp[7])}\n Maximum Temperature: {format_temperature(max_temp[7])}\n Daytime: {daytime[7]}\n     Chance of rain: {day_rain_chance[7]}%\n Nighttime: {nighttime[7]}\n     Chance of rain: {night_rain_chance[7]}%""\n"
+    # my_string = ""
+    # my_string += "\n" f"{num_days} Day Overview\n   The lowest temperature will be {format_temperature(min_temp[0])}, and will occur on {date[0]}.\n   The highest temperature will be {format_temperature(max_temp[2])}, and will occur on {date[2]}.\n   The average low this week is {format_temperature(mean_min_result)}.\n   The average high this week is {format_temperature(mean_max_result)}.""\n"
+    # my_string += "\n" f"-------- {date[0]} --------\n Minimum Temperature: {format_temperature(min_temp[0])}\n Maximum Temperature: {format_temperature(max_temp[0])}\n Daytime: {daytime[0]}\n     Chance of rain: {day_rain_chance[0]}%\n Nighttime: {nighttime[0]}\n     Chance of rain: {night_rain_chance[0]}%""\n" "\n" f"-------- {date[1]} --------\n Minimum Temperature: {format_temperature(min_temp[1])}\n Maximum Temperature: {format_temperature(max_temp[1])}\n Daytime: {daytime[1]}\n     Chance of rain: {day_rain_chance[1]}%\n Nighttime: {nighttime[1]}\n     Chance of rain: {night_rain_chance[1]}%""\n" "\n" f"-------- {date[2]} --------\n Minimum Temperature: {format_temperature(min_temp[2])}\n Maximum Temperature: {format_temperature(max_temp[2])}\n Daytime: {daytime[2]}\n     Chance of rain: {day_rain_chance[2]}%\n Nighttime: {nighttime[2]}\n     Chance of rain: {night_rain_chance[2]}%""\n" "\n" f"-------- {date[3]} --------\n Minimum Temperature: {format_temperature(min_temp[3])}\n Maximum Temperature: {format_temperature(max_temp[3])}\n Daytime: {daytime[3]}\n     Chance of rain: {day_rain_chance[3]}%\n Nighttime: {nighttime[3]}\n     Chance of rain: {night_rain_chance[3]}%""\n" "\n" f"-------- {date[4]} --------\n Minimum Temperature: {format_temperature(min_temp[4])}\n Maximum Temperature: {format_temperature(max_temp[4])}\n Daytime: {daytime[4]}\n     Chance of rain: {day_rain_chance[4]}%\n Nighttime: {nighttime[4]}\n     Chance of rain: {night_rain_chance[4]}%""\n"
+    # # my_string += "\n" f"-------- {date[5]} --------\n Minimum Temperature: {format_temperature(min_temp[5])}\n Maximum Temperature: {format_temperature(max_temp[5])}\n Daytime: {daytime[5]}\n     Chance of rain: {day_rain_chance[5]}%\n Nighttime: {nighttime[5]}\n     Chance of rain: {night_rain_chance[5]}%""\n" "\n" f"-------- {date[6]} --------\n Minimum Temperature: {format_temperature(min_temp[6])}\n Maximum Temperature: {format_temperature(max_temp[6])}\n Daytime: {daytime[6]}\n     Chance of rain: {day_rain_chance[6]}%\n Nighttime: {nighttime[6]}\n     Chance of rain: {night_rain_chance[6]}%""\n" "\n" f"-------- {date[7]} --------\n Minimum Temperature: {format_temperature(min_temp[7])}\n Maximum Temperature: {format_temperature(max_temp[7])}\n Daytime: {daytime[7]}\n     Chance of rain: {day_rain_chance[7]}%\n Nighttime: {nighttime[7]}\n     Chance of rain: {night_rain_chance[7]}%""\n"
     
-    return my_string
+    # return my_string
+
+    final_output = f"""{len(date)} Day Overview
+    The lowest temperature will be {format_temperature(min_temp[0])}, and will occur on {date[0]}.
+    The highest temperature will be {format_temperature(max_temp[2])}, and will occur on {date[2]}.
+    The average low this week is {format_temperature(mean_min_result)}.
+    The average high this week is {format_temperature(mean_max_result)}.\n"""
+    
+    x = 0
+    while x!=len(date):
+            final_output += f"""\n -------- {date[x]} --------
+            Minimum Temperature: {format_temperature(min_temp[x])}
+            Maximum Temperature: {format_temperature(max_temp[x])}
+            Daytime: {daytime[x]}
+            Chance of rain: {day_rain_chance[x]}%
+            Nighttime: {nighttime[x]}
+            Chance of rain: {night_rain_chance[x]}%"""
+        
+            x = x + 1
+
+    final_output = final_output + "\n"
+
 
     
 # Section six - Do NOT change code.
