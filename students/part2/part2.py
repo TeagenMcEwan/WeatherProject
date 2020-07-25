@@ -40,18 +40,18 @@ def jsondata (forecast_file):
 jsondata("data/forecast_5days_a.json")
 
 
-    df = {
-        "min_temps": [min_list],
-        "max_temps": [max_list],
-        "days": [date_list]
-    }
+    # df = {
+    #     "min_temps": [min_list],
+    #     "max_temps": [max_list],
+    #     "days": [date_list]
+    # }
 
-    fig = px.line(
-        df,
-        x="days",
-        y="min_temps", "max_temps",
-        title=f"Weather Project: Minimum and Maximum Temperatures, Over {num_days} Days"
-    )
-    fig.write_html("first-graph.html")
+    # fig = px.line(
+    #     df,
+    #     x="days",
+    #     y="min_temps", "max_temps",
+    #     title=f"Weather Project: Minimum and Maximum Temperatures, Over {num_days} Days"
+    # )
+    # fig.write_html("first-graph.html")
 
 fig.show()
