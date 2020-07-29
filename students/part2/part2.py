@@ -18,8 +18,8 @@ def convert_f_to_c(temp_in_farenheit):
     date = []
     min_temp = []
     max_temp = []
-    real_feel_c = []
-    real_feel_shade_c = []
+    real_feel = []
+    real_feel_shade = []
 
 def jsondata (forecast_file):
     with open(forecast_file) as f:
@@ -30,28 +30,32 @@ def jsondata (forecast_file):
         date = date.append(convert_date(items["Date"]))
         min_temp = min_temp.append(convert_f_to_c(items["Temperature"]["Minimum"]["Value"]))
         max_temp = max_temp.append(convert_f_to_c(items["Temperature"]["Maximum"]["Value"]))
-        real_feel_c = convert_f_to_c(items["Day"] ["Temperature"])
-        real_feel_shade_c = convert_f_to_c(items[""])
 
         temps = {"Date": date, "Min": min_temp, "Max": max_temp}
 
         templist.append(temps)
 
+    for items in forecast_file["RealFeelTemperature"]:
+        real_feel = real_feel.append(convert_f_to_c(items["Minimum"]["Value"]))
+
+    for items in forecast_file["RealFeelTemperatureShade"]:
+        real_feel_shade = real_feel_shade.append(convert_f_to_c(items["Minimum"]["Value"]))
+
 jsondata("data/forecast_5days_a.json")
 
 
-    # df = {
-    #     "min_temps": [min_list],
-    #     "max_temps": [max_list],
-    #     "days": [date_list]
-    # }
+df = {
+    "min_temp":[min_list,
+    "max_temp":[max_list],
+    "date": [date_list]
+    }
 
-    # fig = px.line(
-    #     df,
-    #     x="days",
-    #     y="min_temps", "max_temps",
-    #     title=f"Weather Project: Minimum and Maximum Temperatures, Over {num_days} Days"
-    # )
-    # fig.write_html("first-graph.html")
+fig = px.line(
+    df,
+    x="days",
+    y="temps",
+    title=f"Weather Project: Minimum and Maximum Temperatures, Over {num_days} Days"
+)
+fig.write_html("first-graph.html")
 
 fig.show()
